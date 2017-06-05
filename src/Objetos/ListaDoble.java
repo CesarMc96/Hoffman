@@ -1,12 +1,12 @@
 package Objetos;
 
-public class Lista<T extends Comparable<T>> {
+public class ListaDoble<T extends Comparable<T>> {
 
     private Nodo<T> inicio;
     private Nodo<T> fin;
     private int tamano;
 
-    public Lista() {
+    public ListaDoble() {
         tamano = 0;
     }
 

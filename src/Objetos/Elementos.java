@@ -1,22 +1,22 @@
 package Objetos;
 
-public class Dato implements Comparable<Dato> {
+public class Elementos implements Comparable<Elementos> {
 
     private char caracter;
     private int numero;
 
-    public Dato() {
+    public Elementos() {
     }
 
-    public Dato(char caracter) {
+    public Elementos(char caracter) {
         this.caracter = caracter;
     }
 
-    public Dato(int numero) {
+    public Elementos(int numero) {
         this.numero = numero;
     }
 
-    public Dato(char caracter, int numero) {
+    public Elementos(char caracter, int numero) {
         this.caracter = caracter;
         this.numero = numero;
     }
@@ -43,7 +43,7 @@ public class Dato implements Comparable<Dato> {
     }
 
     @Override
-    public int compareTo(Dato t) {
+    public int compareTo(Elementos t) {
         return this.numero - t.getNumero();
     }
 

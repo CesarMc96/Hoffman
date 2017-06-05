@@ -20,8 +20,8 @@ public class Arbol<T extends Comparable<T>> implements Comparable<Arbol> {
         if (raiz == null) {
             raiz = ((Arbol) elemento).getRaiz();
         } else {
-            int suma = ((Dato) this.raiz.getElemento()).getNumero() + ((Dato) ((Arbol) elemento).getRaiz().getElemento()).getNumero();
-            Hoja<T> nuevaRaiz = new Hoja(new Dato(suma));
+            int suma = ((Elementos) this.raiz.getElemento()).getNumero() + ((Elementos) ((Arbol) elemento).getRaiz().getElemento()).getNumero();
+            Hoja<T> nuevaRaiz = new Hoja(new Elementos(suma));
             nuevaRaiz.setIzquierda(raiz);
             nuevaRaiz.setDerecha(((Arbol) elemento).getRaiz());
             raiz = nuevaRaiz;
@@ -56,8 +56,7 @@ public class Arbol<T extends Comparable<T>> implements Comparable<Arbol> {
     private void generarDiccionario(Hoja<T> t, String camino) {
         if (t != null) {
             if (t.getIzquierda() == null && t.getDerecha() == null) {
-//                System.out.println("letra: "+((Dato)t.getDato()).getCaracter()+" Camino: "+camino);
-                char c = ((Dato) t.getElemento()).getCaracter();
+                char c = ((Elementos) t.getElemento()).getCaracter();
                 if (c == '0' || c == '1') {
                     diccionario += "no" + c + camino;
                 } else {
